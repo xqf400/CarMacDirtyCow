@@ -96,7 +96,7 @@ class CarView: UIViewController, UINavigationControllerDelegate {
         }))
         
         alert.addAction(UIAlertAction(title: "🎇Example Images🌄", style: .default, handler: { action in
-            if let url = URL(string: "    https://github.com/xqf400/CarMacDirtyCow/tree/main/Images/TestImages") {
+            if let url = URL(string: "https://github.com/xqf400/CarMacDirtyCow/tree/main/Images/TestImages") {
                 UIApplication.shared.open(url)
             }
         }))
