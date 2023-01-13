@@ -8,6 +8,9 @@
 
 Not very beautiful, but should work ;)
 
+On my iPhone 14 a respring or after a while it resets the wallpaper, so do it before you connect carplay and check the image in the app
+
+
 Steps:
 1. Install with Trollstore, sign it yourself or sign it via service provider
 2. select your image(s) or do nothing and the default Wallpaper will be selected
@@ -19,6 +22,9 @@ Steps:
 **Bugs:**
 - Image is black: Repeat step 2
 - App crash-> Image is to big or size is wrong (I don't know exactly what is the problem 🤔😤), please try to edit the image, choose an other or download image from Github (see below)
+
+**Todo**
+- run at start automatically
 
 **Example Images at Github**
 [Images](https://github.com/xqf400/CarMacDirtyCow/tree/main/Images/TestImages)
