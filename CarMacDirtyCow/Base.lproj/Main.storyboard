@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarMacDirtyCow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-y6-sU8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐮CarMacDirtyCow🐮" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-y6-sU8">
                                 <rect key="frame" x="8" y="67" width="377" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="biI-9y-JHP"/>
@@ -61,7 +61,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Pick Dark Wall"/>
                                         <connections>
-                                            <action selector="replaceDarkButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkS-sI-mHx"/>
                                             <action selector="selectDarkButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOk-kh-dRK"/>
                                         </connections>
                                     </button>
@@ -165,29 +164,25 @@
                                     <constraint firstAttribute="height" constant="120" id="bxZ-rI-eAq"/>
                                 </constraints>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4EY-bk-R8Y">
-                                <rect key="frame" x="186.66666666666666" y="601.33333333333337" width="20" height="20"/>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="RTR-kF-f4D"/>
-                                    <constraint firstAttribute="width" constant="20" id="cXE-RR-iL1"/>
-                                </constraints>
-                            </activityIndicatorView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uc1-E2-S9h">
-                                <rect key="frame" x="8" y="637.33333333333337" width="377" height="172.66666666666663"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uc1-E2-S9h">
+                                <rect key="frame" x="8" y="593.33333333333337" width="377" height="216.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4EY-bk-R8Y">
+                                <rect key="frame" x="186.66666666666666" y="428.66666666666669" width="20" height="20"/>
+                                <color key="color" systemColor="tintColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4EY-bk-R8Y" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="18f-hf-AGu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fdl-eV-HUe" secondAttribute="trailing" constant="8" id="30a-Vq-b6B"/>
                             <constraint firstItem="ELu-EB-bvE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="6MJ-Jh-dk7"/>
                             <constraint firstItem="KT1-vK-ZPj" firstAttribute="top" secondItem="XLF-YK-PrZ" secondAttribute="bottom" constant="30" id="9U5-vH-w5m"/>
-                            <constraint firstItem="4EY-bk-R8Y" firstAttribute="top" secondItem="5VQ-ay-N6B" secondAttribute="bottom" constant="16" id="A0W-7Y-4Is"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uc1-E2-S9h" secondAttribute="trailing" constant="8" id="C0P-e4-TwN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XLF-YK-PrZ" secondAttribute="trailing" constant="8" id="Hbb-7X-6mp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MGG-2h-Ran" secondAttribute="trailing" constant="8" id="K98-mP-HYV"/>
@@ -203,13 +198,13 @@
                             <constraint firstItem="4EY-bk-R8Y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XsK-Eh-iNb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ELu-EB-bvE" secondAttribute="trailing" constant="8" id="YwX-fb-A50"/>
                             <constraint firstItem="KT1-vK-ZPj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="a8N-eO-YZk"/>
-                            <constraint firstItem="Uc1-E2-S9h" firstAttribute="top" secondItem="4EY-bk-R8Y" secondAttribute="bottom" constant="16" id="bIa-sa-jRu"/>
                             <constraint firstItem="Uc1-E2-S9h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ePf-e6-K7w"/>
                             <constraint firstItem="ef5-y6-sU8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="h0z-TB-yS0"/>
                             <constraint firstAttribute="trailing" secondItem="5VQ-ay-N6B" secondAttribute="trailing" constant="8" id="hVq-lR-j7L"/>
                             <constraint firstItem="XLF-YK-PrZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="iR2-YA-baz"/>
                             <constraint firstItem="Svh-sQ-sRw" firstAttribute="top" secondItem="ef5-y6-sU8" secondAttribute="bottom" constant="8" id="kSc-YF-uD7"/>
                             <constraint firstItem="Svh-sQ-sRw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="l5B-ds-o6V"/>
+                            <constraint firstItem="Uc1-E2-S9h" firstAttribute="top" secondItem="5VQ-ay-N6B" secondAttribute="bottom" constant="8" id="lqn-Ox-EDs"/>
                             <constraint firstItem="MGG-2h-Ran" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="n47-yW-iNJ"/>
                             <constraint firstItem="MGG-2h-Ran" firstAttribute="top" secondItem="ICi-f5-S7i" secondAttribute="bottom" constant="8" id="oT5-ce-MXx"/>
                             <constraint firstItem="Fdl-eV-HUe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="sco-Pr-rvV"/>
@@ -230,7 +225,6 @@
                         <outlet property="savedLightUiimageView" destination="oU6-Z5-LhH" id="hsE-Go-ocX"/>
                         <outlet property="selectedDarkButtonOutlet" destination="Zpb-kk-rPv" id="NSr-cf-gUg"/>
                         <outlet property="selectedLightButtonOutlet" destination="hRe-ga-l1b" id="sQS-y0-jUZ"/>
-                        <outlet property="stackViewReplace" destination="XLF-YK-PrZ" id="maS-Fu-68D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -239,14 +233,17 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

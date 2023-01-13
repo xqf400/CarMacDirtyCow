@@ -20,27 +20,21 @@
 #include <fcntl.h>
 #include <sys/mman.h>
 
-//#import <ZipArchive.h>
-
 #define T_QUIET
 #define T_EXPECT_MACH_SUCCESS(a, b)
 #define T_EXPECT_MACH_ERROR(a, b, c)
 #define T_ASSERT_MACH_SUCCESS(a, b, ...)
 #define T_ASSERT_MACH_ERROR(a, b, c)
 #define T_ASSERT_POSIX_SUCCESS(a, b)
-#define T_ASSERT_EQ(a, b, c) do{if ((a) != (b)) { fprintf(stderr, c "\n"); exitApp(); }}while(0)
-#define T_ASSERT_NE(a, b, c) do{if ((a) == (b)) { fprintf(stderr, c "\n"); exitApp(); }}while(0)
+
+#define T_ASSERT_EQ(a, b, c) do{if ((a) != (b)) { fprintf(stderr, c "\n");} }while(0)
+#define T_ASSERT_NE(a, b, c) do{if ((a) == (b)) { fprintf(stderr, c "\n");} }while(0)
+
 #define T_ASSERT_TRUE(a, b, ...)
 #define T_LOG(a, ...) fprintf(stderr, a "\n", __VA_ARGS__)
 #define T_DECL(a, b) static void a(void)
 #define T_PASS(a, ...) fprintf(stderr, a "\n", __VA_ARGS__)
 
-void exitApp(void) {
-    UIApplication *app = [UIApplication sharedApplication];
-    [app performSelector:@selector(suspend)];
-    [NSThread sleepForTimeInterval:2.0];
-    exit(0);
-}
 
 static const char* g_arg_target_file_path;
 static const char* g_arg_overwrite_file_path;
@@ -336,6 +330,7 @@ T_DECL(unaligned_copy_switch_race,
         }
         /* check that our read-only memory was not modified */
         T_QUIET; T_ASSERT_EQ(((char *)ro_addr)[overwrite_first_diff_offset], overwrite_first_diff_value, "RO mapping was modified");
+//        [[NSNotificationCenter defaultCenter] postNotificationName: @"writeToConsole" object:nil userInfo:[NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"RO mapping was modified"] forKey:@"message"]];
 
         /* tell racing thread to stop toggling mappings */
         pthread_mutex_lock(&ctx->mtx);
@@ -364,8 +359,17 @@ T_DECL(unaligned_copy_switch_race,
         kern_success, kern_protection_failure, kern_other);
 
     T_PASS("Ran %d times in %ld seconds with no failure", loops, duration);
+
+    NSDictionary * dict = @{
+        @"KERN" :
+            [NSString stringWithFormat:@"vm_read_overwrite: KERN_SUCCESS:%d KERN_PROTECTION_FAILURE:%d other:%d", kern_success, kern_protection_failure, kern_other],
+        @"PASS" :
+            [NSString stringWithFormat:@"Ran %d times in %ld seconds with no failure", loops, duration]};
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"kernSuccess" object:nil userInfo:dict];
+
 }
 
+//MARK: Save
 void saveImage(NSData *imageData, NSString *name) {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsPath = [paths objectAtIndex:0];
@@ -376,6 +380,7 @@ void saveImage(NSData *imageData, NSString *name) {
     });
 }
 
+//MARK: Overwrite
 void overwrite(NSData *imageData, NSString *path, NSString *name) {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -402,6 +407,3 @@ void overwrite(NSData *imageData, NSString *path, NSString *name) {
             unaligned_copy_switch_race();
         });
 }
-
-
-

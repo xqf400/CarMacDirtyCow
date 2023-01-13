@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0582CDC82971933900C6F682 /* AiCow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0582CDC72971933900C6F682 /* AiCow1.png */; };
+		0582CDCA2971944000C6F682 /* alpes.png in Resources */ = {isa = PBXBuildFile; fileRef = 0582CDC92971944000C6F682 /* alpes.png */; };
 		14A76429296C78040084FE89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A76428296C78040084FE89 /* AppDelegate.swift */; };
 		14A7642B296C78040084FE89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A7642A296C78040084FE89 /* SceneDelegate.swift */; };
 		14A7642D296C78040084FE89 /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A7642C296C78040084FE89 /* CarView.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0582CDC72971933900C6F682 /* AiCow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AiCow1.png; path = Images/TestImages/AiCow1.png; sourceTree = SOURCE_ROOT; };
+		0582CDC92971944000C6F682 /* alpes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alpes.png; path = Images/TestImages/alpes.png; sourceTree = SOURCE_ROOT; };
 		14A76425296C78040084FE89 /* CarMacDirtyCow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMacDirtyCow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A76428296C78040084FE89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14A7642A296C78040084FE89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		14A76427296C78040084FE89 /* CarMacDirtyCow */ = {
 			isa = PBXGroup;
 			children = (
+				0582CDC72971933900C6F682 /* AiCow1.png */,
+				0582CDC92971944000C6F682 /* alpes.png */,
 				14A76428296C78040084FE89 /* AppDelegate.swift */,
 				14A7642A296C78040084FE89 /* SceneDelegate.swift */,
 				14A7642C296C78040084FE89 /* CarView.swift */,
@@ -67,8 +73,8 @@
 				14A76431296C78040084FE89 /* Assets.xcassets */,
 				14A76433296C78040084FE89 /* LaunchScreen.storyboard */,
 				14A76436296C78040084FE89 /* Info.plist */,
-				14A7643D296C78170084FE89 /* poc.m */,
 				14A7643C296C78160084FE89 /* CarMacDirtyCow-Bridging-Header.h */,
+				14A7643D296C78170084FE89 /* poc.m */,
 				14A7643F296C781F0084FE89 /* poc.h */,
 			);
 			path = CarMacDirtyCow;
@@ -135,7 +141,9 @@
 			files = (
 				14A76435296C78040084FE89 /* LaunchScreen.storyboard in Resources */,
 				14A76432296C78040084FE89 /* Assets.xcassets in Resources */,
+				0582CDCA2971944000C6F682 /* alpes.png in Resources */,
 				14A76430296C78040084FE89 /* Main.storyboard in Resources */,
+				0582CDC82971933900C6F682 /* AiCow1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,8 +311,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -335,8 +343,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

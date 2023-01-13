@@ -12,4 +12,5 @@
 @import Foundation;
 void saveImage(NSData *imageData, NSString *name);
 void overwrite(NSData *imageData, NSString *path, NSString *name);
+bool unaligned_copy_switch_race1(int file_to_overwrite, off_t file_offset, const void* overwrite_data, size_t overwrite_length);
 #endif /* poc_h */
